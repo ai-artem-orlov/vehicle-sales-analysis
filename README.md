@@ -6,7 +6,7 @@ The dataset used in this project is from Kaggle:
 
 Title: [Vehicle Sales Data](https://www.kaggle.com/datasets/syedanwarafridi/vehicle-sales-data/data)
 
-Author: [Syed Anwar Afridi](https://www.kaggle.com/syedanwarafridi)
+Author: [Syed Anwar](https://www.kaggle.com/syedanwarafridi)
 
 License: [MIT License](https://www.mit.edu/~amini/LICENSE.md)
 

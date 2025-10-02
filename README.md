@@ -5,14 +5,19 @@ The aim of the project is to help the fictitious European car-selling company Mo
 
 
 ## Dataset
-The dataset used in this project is from Kaggle:
+The dataset used in this project comes from Kaggle:
 - Title: [Vehicle Sales Data](https://www.kaggle.com/datasets/syedanwarafridi/vehicle-sales-data/data)
 - Author: [Syed Anwar](https://www.kaggle.com/syedanwarafridi)
 - License: [MIT License](https://www.mit.edu/~amini/LICENSE.md)
 The dataset is included in this repository under the terms of the MIT License. All credit for the dataset goes to the original author.
 
 
-
+## Data preparation and basic exploration in Excel
+## Data modeling and relational database creation in SQL Server
+## Data analysis in SQL Server
+## Data imputation using Python
+## Data visualization in Power BI
+## Conclusion
 
 
 

@@ -17,8 +17,9 @@ At the beginning, the dataset was downloaded from Kaggle in .csv format. Then it
 <img width="1441" height="187" alt="image" src="https://github.com/user-attachments/assets/e8433e37-72b1-41ba-b126-4670a3cc15d1" />
 
 The next step was basic exploratory data analysis using descriptive statistics, distribution charts, and pivot tables. This allowed to understand the quantitative data better. The results were saved in excel workbook [data_and_basic_EDA_binary](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/data_and_basic_EDA_binary.xlsb). Excel Binary File Format .xlsb was used to reduce the size of the file.
-<img width="479" height="185" alt="image" src="https://github.com/user-attachments/assets/9b3edd73-5a61-451a-b850-396c35d17cf1" />
-<img width="428" height="256" alt="image" src="https://github.com/user-attachments/assets/2c9069a0-66db-4c7d-9245-7628ac793107" />
+
+<img width="597" height="230" alt="image" src="https://github.com/user-attachments/assets/9b3edd73-5a61-451a-b850-396c35d17cf1" />
+<img width="385" height="230" alt="image" src="https://github.com/user-attachments/assets/2c9069a0-66db-4c7d-9245-7628ac793107" />
 
 
 ## Data modeling and relational database creation in SQL Server

@@ -14,6 +14,7 @@ The dataset is included in this repository under the terms of the MIT License. A
 
 ## Data preparation and basic exploration in Excel
 At the beginning, the dataset was downloaded from Kaggle in .csv format. Then it got cleaned in Power Query by: assigning column datatypes to catch inconsistencies, trimming and aligning capitalization of text columns, and removing rows with errors and missing data. Initially, the dataset contained 558837 rows, so it was decided that the optimal way to handle missing data issue was by removing the rows as the dataset is pretty big considering the time period it covers. After the cleaning the dataset had 432602 rows, so 126235 rows were removed, which is around 23% of the initial size. The final dataset was saved as [data_in_csv](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/data_in_csv.zip).
+
 <img width="1441" height="187" alt="image" src="https://github.com/user-attachments/assets/e8433e37-72b1-41ba-b126-4670a3cc15d1" />
 
 The next step was basic exploratory data analysis using descriptive statistics, distribution charts, and pivot tables. This allowed to understand the quantitative data better. The results were saved in excel workbook [data_and_basic_EDA_binary](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/data_and_basic_EDA_binary.xlsb). Excel Binary File Format .xlsb was used to reduce the size of the file.

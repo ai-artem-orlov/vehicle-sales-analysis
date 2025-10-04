@@ -1,5 +1,6 @@
 # Vehicle Sales Analysis
 
+
 ## Abstract
 The aim of the project is to help the fictitious European car-selling company Motor123 from 2015 analyze the US vehicle market and competition landscape to plan and prepare for expansion. The project involves: basic data exploration in Excel; modeling, relational database creation, and data analysis in SQL Server; visualization in Power BI; and data imputation using Python.
 
@@ -17,22 +18,20 @@ At the beginning, the dataset was downloaded from Kaggle in .csv format. Then it
 
 <img width="1441" height="187" alt="image" src="https://github.com/user-attachments/assets/e8433e37-72b1-41ba-b126-4670a3cc15d1" />
 
-
 The next step was basic exploratory data analysis using descriptive statistics, distribution charts, and pivot tables. This allowed to understand the quantitative data better. The results were saved in excel workbook [data_and_basic_EDA_binary](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/data_and_basic_EDA_binary.xlsb). Excel Binary File Format .xlsb was used to reduce the size of the file.
-
-<p align="left">
-  <img src="https://github.com/user-attachments/assets/9b3edd73-5a61-451a-b850-396c35d17cf1" alt="Image 1" height="230" style="margin-right: 10px;" />
-  <img src="https://github.com/user-attachments/assets/2c9069a0-66db-4c7d-9245-7628ac793107" alt="Image 2" height="230" />
-</p>
-
-
 
 <img width="597" height="230" alt="image" src="https://github.com/user-attachments/assets/9b3edd73-5a61-451a-b850-396c35d17cf1" />
 <img width="385" height="230" alt="image" src="https://github.com/user-attachments/assets/2c9069a0-66db-4c7d-9245-7628ac793107" />
 
 
-
 ## Data modeling and relational database creation in SQL Server
+After the analysis in Excel, the data was imported as a flat file into the created database "vehicle_sales" in SQL Server Management Studio. Then a basic data transformations were performed in SQL: changing column datatypes to more appropriate ones and splitting "saledate" column into parts that can be more easily analyzed. The entire SQL code can be viewed here: [modeling_query](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/modeling_query.sql).
+
+In the next step the relational database structure was created and then filled with data. Besides that, primary key and foreign key constrains were specified to ensure data consistency. As a result the database had the following snowflake schema:
+
+<img width="1079" height="703" alt="image" src="https://github.com/user-attachments/assets/eac66338-905c-48e6-80ea-fa65c54369f8" />
+
+
 ## Data analysis in SQL Server
 ## Data imputation using Python
 ## Data visualization in Power BI

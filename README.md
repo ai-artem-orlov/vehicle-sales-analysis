@@ -1,7 +1,7 @@
 # Vehicle Sales Analysis
 
 ## Abstract
-The aim of the project is to help the fictitious European car-selling company Motor123 from 2015 analyze the US vehicle market and competition landscape to plan and prepare for expansion. The project involves: basic data exploration in Excel; modeling, relational database creation, and data analysis in SQL Server; visualization in Power BI; data imputation using Python.
+The aim of the project is to help the fictitious European car-selling company Motor123 from 2015 analyze the US vehicle market and competition landscape to plan and prepare for expansion. The project involves: basic data exploration in Excel; modeling, relational database creation, and data analysis in SQL Server; visualization in Power BI; and data imputation using Python.
 
 
 ## Dataset
@@ -20,8 +20,10 @@ At the beginning, the dataset was downloaded from Kaggle in .csv format. Then it
 
 The next step was basic exploratory data analysis using descriptive statistics, distribution charts, and pivot tables. This allowed to understand the quantitative data better. The results were saved in excel workbook [data_and_basic_EDA_binary](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/data_and_basic_EDA_binary.xlsb). Excel Binary File Format .xlsb was used to reduce the size of the file.
 
+<p align="center">
 <img width="597" height="230" alt="image" src="https://github.com/user-attachments/assets/9b3edd73-5a61-451a-b850-396c35d17cf1" />
 <img width="385" height="230" alt="image" src="https://github.com/user-attachments/assets/2c9069a0-66db-4c7d-9245-7628ac793107" />
+</p>
 
 
 ## Data modeling and relational database creation in SQL Server

@@ -27,7 +27,7 @@ The next step was basic exploratory data analysis using descriptive statistics, 
 ## Data modeling and relational database creation in SQL Server
 After the analysis in Excel, the data was imported as a flat file into the created database "vehicle_sales" in SQL Server Management Studio. Then a basic data transformations were performed in SQL: changing column datatypes to more appropriate ones and splitting "saledate" column into parts that can be more easily analyzed. The entire SQL code can be viewed here: [modeling_query](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/modeling_query.sql).
 
-In the next step the relational database structure was created and then filled with data. Besides that, primary key and foreign key constrains were specified to ensure data consistency. As a result the database had the following snowflake schema:
+In the next step the relational database structure was created and then filled with data. Besides that, primary key and foreign key constrains were specified to ensure data consistency. As a result the database had the following snowflake schema with "sale" table as a fact and other tables as dimensions:
 
 <img width="1079" height="703" alt="image" src="https://github.com/user-attachments/assets/eac66338-905c-48e6-80ea-fa65c54369f8" />
 

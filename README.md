@@ -33,6 +33,10 @@ In the next step the relational database structure was created and then filled w
 
 
 ## Data analysis in SQL Server
+
+
+
+
 ## Data imputation using Python
 ## Data visualization in Power BI
 ## Conclusion

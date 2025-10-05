@@ -29,12 +29,50 @@ After the analysis in Excel, the data was imported as a flat file into the creat
 
 In the next step the relational database structure was created and then filled with data. Besides that, primary key and foreign key constrains were specified to ensure data consistency. As a result the database had the following snowflake schema with "sale" table as a fact and other tables as dimensions:
 
-<img width="1079" height="703" alt="image" src="https://github.com/user-attachments/assets/eac66338-905c-48e6-80ea-fa65c54369f8" />
+<img width="690" height="449" alt="image" src="https://github.com/user-attachments/assets/eac66338-905c-48e6-80ea-fa65c54369f8" />
 
 
 ## Data analysis in SQL Server
+This part of the project focused on finding useful insights about two major areas: competition and portfolio. Having the relational database created earlier, the analysis was started from additional data exploration using SQL. This allowed to examine data structures and distributions more deeply. The EDA allowed to observe the issue with the sales distribution over time, which resulted in decision to crop the dataset to only six first months of 2015. The dataset after filtering covered 397682 sales across 34 states and involved 11661 sellers and 767 car models.
 
+<img width="385" height="270" alt="image" src="https://github.com/user-attachments/assets/e19c1ca0-26cc-4a67-bdb7-d634894dcdf3" />
 
+| price_category |	number_of_sales |
+|:--------------|--------------|
+| 1	 | 391379 |
+| 2 |	5974 |
+| 3 |	269 |
+| 4 |	47 |
+| 5 |	12 |
+| 6 |	1 |
+
+---
+
+The competition analysis identified the main revenue drivers, with Ford Motor Credit Company LLC, The Hertz Corporation, and Nissan Infiniti LT leading in total sales value. It also measured month-to-month revenue growth to detect the fastest-expanding sellers, and compared average selling prices and price differences relative to market value (MMR) to assess sales efficiency. Finally, it analyzed the sellers’ operational reach across states and revealed that competition was the most intense in California, Florida, and Texas, where over 1,000 sellers were active.
+
+<img width="735" height="324" alt="image" src="https://github.com/user-attachments/assets/f4a1eb5f-e8e4-4292-a4be-1c0f95bddf29" />
+
+| Seller                                     | Avg Revenue Change |
+|:--------------------------------------------|--------------------:|
+| PORSCHE FINANCIAL SERVICES                 | 924,625            |
+| WORLD OMNI FINANCIAL CORPORATION           | 832,360            |
+| GM REMARKETING                             | 828,325.8          |
+| MIDWEST CAR CORPORATION/ALLY FINANCIAL     | 792,800            |
+| HYUNDAI MOTOR FINANCE                      | 733,900            |
+
+---
+
+In the portfolio analysis, the focus shifted from sellers to the cars themselves. The analysis determined best-selling models for each seller and identified which models and brands most frequently achieved bestseller status across the dataset. Ford F-150, Honda Accord, and BMW 3 Series stood out as the most common bestsellers, with Ford, Chevrolet, and Honda dominating overall. Further exploration of month-to-month trends highlighted models such as Nissan Leaf, GMC Savana Cargo, and Chevrolet Sonic as those gaining the most popularity. Additionally, the analysis identified car models sold significantly above their market value, with Aston Martin Rapide and Cadillac CTS-V Wagon showing particularly high average margins.
+
+<img width="1441" height="882" alt="image" src="https://github.com/user-attachments/assets/ef3ecdad-ac82-46b7-ab41-c6395480f6e7" />
+
+| Make       | Model         | Sum M2M Sale Changes |
+|:-------------|:---------------|--------------------:|
+| NISSAN      | LEAF           | 273                 |
+| GMC         | SAVANA CARGO   | 160                 |
+| CHEVROLET   | SONIC          | 148                 |
+| HYUNDAI     | ELANTRA        | 44                  |
+| INFINITI    | JX             | 30                  |
 
 
 ## Data imputation using Python

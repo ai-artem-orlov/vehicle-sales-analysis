@@ -76,6 +76,26 @@ In the portfolio analysis, the focus shifted from sellers to the cars themselves
 
 
 ## Data imputation using Python
+The deeper exploratory analysis in SQL Server allowed to identify unproportionally small number of sales in the March-May 2015 period, which suggested that some data might be missing. Therefore, it was decided to conduct time series imputation on number of sales and revenue. It was performed using Python in the following notebook: [data_imputation](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/data_imputation.ipynb). Libraries used in the notebook involve: pandas, numpy, matplotlib, sklearn, statsmodels, etc.
+
+At the beginning, the dataset was filtered and aggregated to achieve the structure required for analysis. The next step was splitting data into training and testing parts and starting modeling on the former one. Firstly, the stationarity of the time series was tested with the Augmented Dickey–Fuller test, which confirmed that mean and variance are stable through time. This allowed to check the time series for seasonality using autocorrelation and partial autocorrelation charts, which identified weekly seasonality. 
+
+<img width="927" height="716" alt="image" src="https://github.com/user-attachments/assets/11c60686-bbba-44db-b548-f6b313aa2696" />
+<img width="940" height="710" alt="image" src="https://github.com/user-attachments/assets/03508bf8-e66d-4a1a-ae60-321cabcd592c" />
+
+For the modeling the seasonality coefficients method was used. It required fitting the trend line to the time series, calculating residuals from it, and then avereging those residuals for each phase of weekly seasonality cycle. After some iterations with trend lines, the model started fitting the dataset pretty well. Mean absolute error (MAE) indicated that the estimated number of sales differs from the actual number on average by 1738. Also, root mean square error (RMSE) indicated that the average error in a model's predictions equals 2946. In a context of sales number range (0 to around 12k) MAE and RMSE are quite moderate as their ratios to the range lenth are around 1/6 and 1/4 correspondingly.
+
+<img width="959" height="743" alt="image" src="https://github.com/user-attachments/assets/192bce5f-e132-4980-99bb-562a27b625b7" />
+
+As a result, the number of sales time series was imputed and probably became more trustworthy as it solved probable data collection issues.
+
+<img width="972" height="744" alt="image" src="https://github.com/user-attachments/assets/5b42ddbb-5029-4256-bec8-b16a9ba592e7" />
+
+Finally, based on the model for the number of sales, the revenue time series was also imputed. There was a very strong linear dependency between number of sales and revenue confirmed by Perason's correlation coefficient r=0.995. Based on that, estimated revenue values were calculated using linear regression and estimated number of sales values.
+
+<img width="978" height="741" alt="image" src="https://github.com/user-attachments/assets/ea900985-9f54-4fdd-a4c5-bf056bb7a299" />
+
+
 ## Data visualization in Power BI
 ## Conclusion
 

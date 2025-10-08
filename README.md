@@ -80,23 +80,41 @@ The deeper exploratory analysis in SQL Server allowed to identify unproportional
 
 At the beginning, the dataset was filtered and aggregated to achieve the structure required for analysis. The next step was splitting data into training and testing parts and starting modeling on the former one. Firstly, the stationarity of the time series was tested with the Augmented Dickey–Fuller test, which confirmed that mean and variance are stable through time. This allowed to check the time series for seasonality using autocorrelation and partial autocorrelation charts, which identified weekly seasonality. 
 
-<img width="927" height="716" alt="image" src="https://github.com/user-attachments/assets/11c60686-bbba-44db-b548-f6b313aa2696" />
-<img width="940" height="710" alt="image" src="https://github.com/user-attachments/assets/03508bf8-e66d-4a1a-ae60-321cabcd592c" />
+<img width="470" height="355" alt="image" src="https://github.com/user-attachments/assets/11c60686-bbba-44db-b548-f6b313aa2696" />
+<img width="470" height="355" alt="image" src="https://github.com/user-attachments/assets/03508bf8-e66d-4a1a-ae60-321cabcd592c" />
 
-For the modeling the seasonality coefficients method was used. It required fitting the trend line to the time series, calculating residuals from it, and then avereging those residuals for each phase of weekly seasonality cycle. After some iterations with trend lines, the model started fitting the dataset pretty well. Mean absolute error (MAE) indicated that the estimated number of sales differs from the actual number on average by 1738. Also, root mean square error (RMSE) indicated that the average error in a model's predictions equals 2946. In a context of sales number range (0 to around 12k) MAE and RMSE are quite moderate as their ratios to the range lenth are around 1/6 and 1/4 correspondingly.
+For the modeling the seasonality coefficients method was used. It required fitting the trend line to the time series, calculating residuals from it, and then avereging those residuals for each phase of weekly seasonality cycle. After some iterations with trend lines, the model started fitting the dataset pretty well. Mean absolute error (MAE) indicated that the estimated number of sales differed from the actual number on average by 1738. Also, root mean square error (RMSE) indicated that the average error in a model's predictions equals 2946. In a context of sales number range (0 to around 12k) MAE and RMSE were quite moderate as their ratios to the range lenth were around 1/6 and 1/4 correspondingly.
 
-<img width="959" height="743" alt="image" src="https://github.com/user-attachments/assets/192bce5f-e132-4980-99bb-562a27b625b7" />
+<img width="480" height="371" alt="image" src="https://github.com/user-attachments/assets/192bce5f-e132-4980-99bb-562a27b625b7" />
 
-As a result, the number of sales time series was imputed and probably became more trustworthy as it solved probable data collection issues.
+As a result, the sales time series was imputed and became more trustworthy as it solved probable data collection issues.
 
-<img width="972" height="744" alt="image" src="https://github.com/user-attachments/assets/5b42ddbb-5029-4256-bec8-b16a9ba592e7" />
+<img width="486" height="372" alt="image" src="https://github.com/user-attachments/assets/5b42ddbb-5029-4256-bec8-b16a9ba592e7" />
 
 Finally, based on the model for the number of sales, the revenue time series was also imputed. There was a very strong linear dependency between number of sales and revenue confirmed by Perason's correlation coefficient r=0.995. Based on that, estimated revenue values were calculated using linear regression and estimated number of sales values.
 
-<img width="978" height="741" alt="image" src="https://github.com/user-attachments/assets/ea900985-9f54-4fdd-a4c5-bf056bb7a299" />
+<img width="489" height="370" alt="image" src="https://github.com/user-attachments/assets/ea900985-9f54-4fdd-a4c5-bf056bb7a299" />
 
 
 ## Data visualization in Power BI
+The final part of the US vehicle market analysis involved presenting the data, so that stakeholders in Motor123 can easily access it and draw new insights from it. Therefore, the universal Power BI report was created, which enables users to slice the data in various ways and analyze it from different perspectives. The report has three main pages representing the most important areas of the analysis: Competition, Portfolio, and Estimation. The file is stored in the repository as [vehicle_market_report](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/vehicle_market_report.pbix).
+
+After sourcing the created relational model from SQL Server and initial cleaning in Power BI Power Query, the first page named "Competition" was created. The goal of tha page was to present the market and submarkets size along with competition landscape. The page allows stakeholders to understand both proportional distribution of the market between sellers, geographical distribution of competition across United States. Also, it allows to identify market leaders and analyze market flucuations over time. 
+
+<img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/2b0e146c-1640-482f-b16e-c487bce3d6eb" />
+
+From the technical side, the pie chart is worth mentioning as it required some interesting DAX code. The initial issue with it was the overwhelming amount of categories, so it was decided to display only the names of sellers who have at least 3% of market share and categorize the rest to "Other". After some iterations and ChatGPT involvement the working code was deployed and allowed to create the dynamic and clean pie chart:
+
+<img width="962" height="245" alt="image" src="https://github.com/user-attachments/assets/e6d18ed7-3963-4fcf-8677-aad27aa6710c" />
+
+
+
+---
+<img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/845cd184-2866-4c65-a128-c00443ccc778" />
+<img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/0839a54e-cf01-4fd8-a200-7d8a85eadf51" />
+
+
+
 ## Conclusion
 
 

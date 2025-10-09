@@ -99,23 +99,30 @@ Finally, based on the model for the number of sales, the revenue time series was
 ## Data visualization in Power BI
 The final part of the US vehicle market analysis involved presenting the data, so that stakeholders in Motor123 can easily access it and draw new insights from it. Therefore, the universal Power BI report was created, which enables users to slice the data in various ways and analyze it from different perspectives. The report has three main pages representing the most important areas of the analysis: Competition, Portfolio, and Estimation. The file is stored in the repository as [vehicle_market_report](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/vehicle_market_report.pbix).
 
-After sourcing the created relational model from SQL Server and initial cleaning in Power BI Power Query, the first page named "Competition" was created. The goal of tha page was to present the market and submarkets size along with competition landscape. The page allows stakeholders to understand both proportional distribution of the market between sellers, geographical distribution of competition across United States. Also, it allows to identify market leaders and analyze market flucuations over time. 
+After sourcing the created relational model from SQL Server and initial cleaning in Power BI Power Query, the first page named "Competition" was created. The goal of tha page was to present the market and submarkets size along with competition landscape. The page allows stakeholders to understand both proportional distribution of the market between sellers and geographical distribution of competition across United States. Also, it allows to identify market leaders and analyze market flucuations over time. 
 
 <img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/2b0e146c-1640-482f-b16e-c487bce3d6eb" />
 
-From the technical side, the pie chart is worth mentioning as it required some interesting DAX code. The initial issue with it was the overwhelming amount of categories, so it was decided to display only the names of sellers who have at least 3% of market share and categorize the rest to "Other". After some iterations and ChatGPT involvement the working code was deployed and allowed to create the dynamic and clean pie chart:
+From the technical side, the pie chart is worth mentioning as it required some interesting DAX code. The initial problem with it was the overwhelming amount of categories, so it was decided to display only the names of sellers who have at least 3% of market share and categorize the rest to "Other". After some iterations and ChatGPT involvement the working code was deployed and allowed to create the dynamic and clean pie chart:
 
 <img width="962" height="245" alt="image" src="https://github.com/user-attachments/assets/e6d18ed7-3963-4fcf-8677-aad27aa6710c" />
 
+---
 
+Another step was creating "Portfolio" page, which aimed at presenting sold cars information in the accessible way to help Motor123 stakeholders make right decisions when it comes to products. The page allows to identify bestselling car models and brands, analyze the demand in the first half of 2015, and understand the purchasing behavior and culture better.
+
+<img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/845cd184-2866-4c65-a128-c00443ccc778" />
 
 ---
-<img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/845cd184-2866-4c65-a128-c00443ccc778" />
+
+Finally, the last page of the report named "Estimation" contains comparison between the actual data and values estimated in Python. This would allow stakeholders to evaluate the potential risks of decision-making based on the actual dataset only. It is a great alternative, which may be considered as optimistic version of history as the estimated values only increase the market evaluation.
+
 <img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/0839a54e-cf01-4fd8-a200-7d8a85eadf51" />
 
 
-
 ## Conclusion
+
+
 
 
 ## License

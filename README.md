@@ -101,7 +101,7 @@ The final part of the US vehicle market analysis involved presenting the data, s
 
 After sourcing the created relational model from SQL Server and initial cleaning in Power BI Power Query, the first page named "Competition" was created. The goal of tha page was to present the market and submarkets size along with competition landscape. The page allows stakeholders to understand both proportional distribution of the market between sellers and geographical distribution of competition across United States. Also, it allows to identify market leaders and analyze market flucuations over time. 
 
-<img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/2b0e146c-1640-482f-b16e-c487bce3d6eb" />
+<img width="1086" height="610" alt="image" src="https://github.com/user-attachments/assets/2b0e146c-1640-482f-b16e-c487bce3d6eb" />
 
 From the technical side, the pie chart is worth mentioning as it required some interesting DAX code. The initial problem with it was the overwhelming amount of categories, so it was decided to display only the names of sellers who have at least 3% of market share and categorize the rest to "Other". After some iterations and ChatGPT involvement the working code was deployed and allowed to create the dynamic and clean pie chart:
 
@@ -111,18 +111,19 @@ From the technical side, the pie chart is worth mentioning as it required some i
 
 Another step was creating "Portfolio" page, which aimed at presenting sold cars information in the accessible way to help Motor123 stakeholders make right decisions when it comes to products. The page allows to identify bestselling car models and brands, analyze the demand in the first half of 2015, and understand the purchasing behavior and culture better.
 
-<img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/845cd184-2866-4c65-a128-c00443ccc778" />
+<img width="1086" height="610" alt="image" src="https://github.com/user-attachments/assets/845cd184-2866-4c65-a128-c00443ccc778" />
 
 ---
 
 Finally, the last page of the report named "Estimation" contains comparison between the actual data and values estimated in Python. This would allow stakeholders to evaluate the potential risks of decision-making based on the actual dataset only. It is a great alternative, which may be considered as optimistic version of history as the estimated values only increase the market evaluation.
 
-<img width="1449" height="813" alt="image" src="https://github.com/user-attachments/assets/0839a54e-cf01-4fd8-a200-7d8a85eadf51" />
+<img width="1086" height="610" alt="image" src="https://github.com/user-attachments/assets/0839a54e-cf01-4fd8-a200-7d8a85eadf51" />
 
 
 ## Conclusion
+The goal of the project has been achieved - it allows for a deep and multilateral analysis of US vehicle market, which definetely would help the fictitious European car-selling company Motor123 to plan and prepare for expansion. It allows to look at the data from various perspectives and make informed decisions in key areas such as: competition strategy, car portfolio selection, and preparation of assets for expansion.
 
-
+From an analytics perspective, the tools used in the project were: Excel, Power Query, Power BI, SQL Server, and Python. All the materials and files can be found in the GitHub repository. I hope you enjoyed the project!
 
 
 ## License

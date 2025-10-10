@@ -76,14 +76,14 @@ In the portfolio analysis, the focus shifted from sellers to the cars themselves
 
 
 ## Data imputation using Python
-The deeper exploratory analysis in SQL Server allowed to identify unproportionally small number of sales in the March-May 2015 period, which suggested that some data might be missing. Therefore, it was decided to conduct time series imputation on number of sales and revenue. It was performed using Python in the following notebook: [data_imputation](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/data_imputation.ipynb). Libraries used in the notebook involve: pandas, numpy, matplotlib, sklearn, statsmodels, etc.
+The deeper exploratory analysis in SQL Server allowed to identify unproportionally small number of sales in the March-May 2015 period, which suggested that some data might be missing. Therefore, it was decided to conduct a time series imputation on the number of sales and revenue. It was performed using Python in the following notebook: [data_imputation](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/data_imputation.ipynb). Libraries used in the notebook involve: pandas, numpy, matplotlib, sklearn, statsmodels, etc.
 
 At the beginning, the dataset was filtered and aggregated to achieve the structure required for analysis. The next step was splitting data into training and testing parts and starting modeling on the former one. Firstly, the stationarity of the time series was tested with the Augmented Dickey–Fuller test, which confirmed that mean and variance are stable through time. This allowed to check the time series for seasonality using autocorrelation and partial autocorrelation charts, which identified weekly seasonality. 
 
 <img width="470" height="355" alt="image" src="https://github.com/user-attachments/assets/11c60686-bbba-44db-b548-f6b313aa2696" />
 <img width="470" height="355" alt="image" src="https://github.com/user-attachments/assets/03508bf8-e66d-4a1a-ae60-321cabcd592c" />
 
-For the modeling the seasonality coefficients method was used. It required fitting the trend line to the time series, calculating residuals from it, and then avereging those residuals for each phase of weekly seasonality cycle. After some iterations with trend lines, the model started fitting the dataset pretty well. Mean absolute error (MAE) indicated that the estimated number of sales differed from the actual number on average by 1738. Also, root mean square error (RMSE) indicated that the average error in a model's predictions equals 2946. In a context of sales number range (0 to around 12k) MAE and RMSE were quite moderate as their ratios to the range lenth were around 1/6 and 1/4 correspondingly.
+For the modeling the seasonality coefficients method was used as the time series exhibits stable, repeating seasonal patterns that can be quantified and applied as additive adjustments. In a nutshell, it required fitting the trend line to the time series, calculating residuals from it, and then avereging those residuals for each phase of weekly seasonality cycle. After some iterations with trend lines, the model started fitting the dataset pretty well. Mean absolute error (MAE) indicated that the estimated number of sales differed from the actual number on average by 1738. Also, root mean square error (RMSE) indicated that the average error in a model's predictions equals 2946. In a context of sales number range (0 to around 12k) MAE and RMSE were quite moderate as their ratios to the range lenth were around 1/6 and 1/4 correspondingly.
 
 <img width="480" height="371" alt="image" src="https://github.com/user-attachments/assets/192bce5f-e132-4980-99bb-562a27b625b7" />
 
@@ -109,7 +109,7 @@ From the technical side, the pie chart is worth mentioning as it required some i
 
 ---
 
-Another step was creating "Portfolio" page, which aimed at presenting sold cars information in the accessible way to help Motor123 stakeholders make right decisions when it comes to products. The page allows to identify bestselling car models and brands, analyze the demand in the first half of 2015, and understand the purchasing behavior and culture better.
+Another step was creating "Portfolio" page, which aimed at presenting sold cars information in the accessible way to help Motor123 stakeholders make right decisions when it comes to products. The page allows to identify bestselling car models and brands, analyze the demand in the first half of 2015, and understand the purchasing behaviors and culture better.
 
 <img width="1086" height="610" alt="image" src="https://github.com/user-attachments/assets/845cd184-2866-4c65-a128-c00443ccc778" />
 

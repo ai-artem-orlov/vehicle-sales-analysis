@@ -1,7 +1,7 @@
 # Vehicle Sales Analysis
 
 ## Abstract
-The goal of this project is to help the fictitious European car-selling company **Motor123** (as of 2015) analyze the U.S. vehicle market and competitive landscape to plan and prepare for expansion. The project involves: basic data exploration in Excel; data modeling, relational database creation, and analysis in SQL Server; visualization in Power BI; and data imputation using Python.
+The goal of this project is to help the fictitious European car-selling company **Motor123** (as of 2015) analyze the U.S. vehicle market and competitive landscape to plan and prepare for expansion. The project involves: basic data exploration in Excel; data modeling, relational database creation, and analysis in SQL Server; data imputation using Python; and visualization in Power BI.
 
 ## Dataset
 The dataset used in this project comes from Kaggle:  
@@ -60,7 +60,7 @@ The analysis revealed that competition was most intense in **California**, **Flo
 |:--------------------------------------------|--------------------:|
 | PORSCHE FINANCIAL SERVICES                 | 924,625            |
 | WORLD OMNI FINANCIAL CORPORATION           | 832,360            |
-| GM REMARKETING                             | 828,325.8          |
+| GM REMARKETING                             | 828,325            |
 | MIDWEST CAR CORPORATION/ALLY FINANCIAL     | 792,800            |
 | HYUNDAI MOTOR FINANCE                      | 733,900            |
 
@@ -100,7 +100,7 @@ After some iterations with trend lines the model evaluation showed:
 - **Mean Absolute Error (MAE):** 1,738  
 - **Root Mean Square Error (RMSE):** 2,946  
 
-Given the sales range (0–12,000), these errors were moderate (MAE ≈ 1/6, RMSE ≈ 1/4 of range length).  
+Given the sales range (0 to ~12k), these errors were moderate (MAE ≈ 1/6, RMSE ≈ 1/4 of range length).  
 
 <img width="480" height="371" alt="image" src="https://github.com/user-attachments/assets/e8836f6b-8140-49f7-95b3-ab2f40b036d2" />
 
@@ -108,7 +108,7 @@ The imputed time series corrected potential data collection issues, making the d
 
 <img width="486" height="372" alt="image" src="https://github.com/user-attachments/assets/f7187d9f-c122-43d8-91b1-9e5c64e8af3e" />
 
-Finally, the **revenue series** was imputed using linear regression based on the strong correlation between sales and revenue (**Pearson’s r = 0.995**).
+Finally, the **revenue series** was imputed using linear regression based on the strong correlation between sales and revenue (**Pearson’s r=0.995**).
 
 <img width="489" height="370" alt="image" src="https://github.com/user-attachments/assets/87f51034-52be-449b-8fca-49da5d8f5ac8" />
 
@@ -130,6 +130,7 @@ The **Portfolio** page presents sales performance by model and brand, helping st
 <img width="1086" height="610" alt="image" src="https://github.com/user-attachments/assets/d6aa4c4d-c22f-44ee-b146-0039a7f03b93" />
 
 Finally, the **Estimation** page compares actual and imputed data from Python, allowing stakeholders to evaluate the potential risks of decision-making based on the actual dataset only. It is a great alternative, which may be considered as optimistic version of history.
+
 <img width="1086" height="610" alt="image" src="https://github.com/user-attachments/assets/fc5d144d-3442-4430-ab11-8f24affa7704" />
 
 ## Conclusion

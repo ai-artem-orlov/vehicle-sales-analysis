@@ -142,5 +142,5 @@ All project materials and files are available in the GitHub repository.
 I hope you enjoy exploring this project!
 
 ## License
-- **My code and analysis:** Licensed under the [MIT License](https://github.com/ai-artem-orlov/vehicle-sales-analysis?tab=MIT-1-ov-file).  
+- **My code and analysis:** Licensed under the [MIT License](https://github.com/ai-artem-orlov/vehicle-sales-analysis/blob/main/LICENSE).  
 - **Dataset:** Licensed under the [MIT License](https://www.mit.edu/~amini/LICENSE.md) by [Syed Anwar](https://www.kaggle.com/syedanwarafridi).
